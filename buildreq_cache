@@ -1,0 +1,15 @@
+1.6.57
+bzip2-dev
+glu-dev
+libXcursor-dev
+libXfixes-dev
+libXi-dev
+libXrandr-dev
+libXrender-dev
+libjpeg-turbo-dev
+mesa-dev
+pkgconfig(x11)
+pkgconfig(xext)
+pkgconfig(xft)
+pkgconfig(zlib)
+tiff-dev

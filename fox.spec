@@ -4,12 +4,12 @@
 #
 Name     : fox
 Version  : 1.6.57
-Release  : 1
+Release  : 2
 URL      : ftp://ftp.fox-toolkit.org/pub/fox-1.6.57.tar.gz
 Source0  : ftp://ftp.fox-toolkit.org/pub/fox-1.6.57.tar.gz
 Summary  : The FOX Toolkit
 Group    : Development/Tools
-License  : GPL-2.0
+License  : GPL-2.0 LGPL-2.1
 Requires: fox-bin = %{version}-%{release}
 Requires: fox-lib = %{version}-%{release}
 Requires: fox-license = %{version}-%{release}
@@ -30,9 +30,7 @@ BuildRequires : pkgconfig(zlib)
 BuildRequires : tiff-dev
 
 %description
-The FOX GUI Library
-===================
-Jeroen van der Zijp <jeroen@fox-toolkit.org>
+Free Objects for X: A GUI Toolkit for C++
 
 %package bin
 Summary: bin components for the fox package.
@@ -97,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1560790687
+export SOURCE_DATE_EPOCH=1560793751
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -117,11 +115,13 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1560790687
+export SOURCE_DATE_EPOCH=1560793751
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fox
+cp LICENSE %{buildroot}/usr/share/package-licenses/fox/LICENSE
 cp adie/LICENSE %{buildroot}/usr/share/package-licenses/fox/adie_LICENSE
 cp calculator/LICENSE %{buildroot}/usr/share/package-licenses/fox/calculator_LICENSE
+cp doc/license.html %{buildroot}/usr/share/package-licenses/fox/doc_license.html
 cp pathfinder/LICENSE %{buildroot}/usr/share/package-licenses/fox/pathfinder_LICENSE
 cp shutterbug/LICENSE %{buildroot}/usr/share/package-licenses/fox/shutterbug_LICENSE
 %make_install
@@ -584,8 +584,10 @@ cp shutterbug/LICENSE %{buildroot}/usr/share/package-licenses/fox/shutterbug_LIC
 
 %files license
 %defattr(0644,root,root,0755)
+/usr/share/package-licenses/fox/LICENSE
 /usr/share/package-licenses/fox/adie_LICENSE
 /usr/share/package-licenses/fox/calculator_LICENSE
+/usr/share/package-licenses/fox/doc_license.html
 /usr/share/package-licenses/fox/pathfinder_LICENSE
 /usr/share/package-licenses/fox/shutterbug_LICENSE
 

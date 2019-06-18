@@ -4,7 +4,7 @@
 #
 Name     : fox
 Version  : 1.6.57
-Release  : 2
+Release  : 3
 URL      : ftp://ftp.fox-toolkit.org/pub/fox-1.6.57.tar.gz
 Source0  : ftp://ftp.fox-toolkit.org/pub/fox-1.6.57.tar.gz
 Summary  : The FOX Toolkit

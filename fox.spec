@@ -4,7 +4,7 @@
 #
 Name     : fox
 Version  : 1.6.57
-Release  : 3
+Release  : 4
 URL      : ftp://ftp.fox-toolkit.org/pub/fox-1.6.57.tar.gz
 Source0  : ftp://ftp.fox-toolkit.org/pub/fox-1.6.57.tar.gz
 Summary  : The FOX Toolkit
@@ -94,8 +94,8 @@ man components for the fox package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1560793751
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1568070801
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -108,14 +108,14 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1560793751
+export SOURCE_DATE_EPOCH=1568070801
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fox
 cp LICENSE %{buildroot}/usr/share/package-licenses/fox/LICENSE

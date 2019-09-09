@@ -3,7 +3,7 @@ libGLU.so.1
 libX11.so.6
 libXcursor.so.1
 libXft.so.2
-libbz2.so.0
+libbz2.so.1.0
 libc.so.6
 libdl.so.2
 libfontconfig.so.1
